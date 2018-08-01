@@ -16,12 +16,23 @@ function isLetter(char) {
 }
 
 function isPalindrome(word){
-	var newString;
-
-
+	var newString="";
+	for(i=0; i<word.length;i++) {
+		var res = isLetter(word[i]);
+		if(res){
+			newString+=word[i].toLowerCase();
+		}
+	}
+	checkString=newString.split("");
+	if(checkString==checkString.reverse()){
+		return true;
+	}
+	return false;
 }
 
+
 		var cWord=prompt("Enter a phrase or a word!");
+		alert(isPalindrome(cWord));
 
     </script>
 </body>
